@@ -4,14 +4,13 @@ var config = {
     port: '443',
     path: '/wd/hub',
     capabilities: [{
-        testobject_api_key: process.env.RDC_PROJECT_API_KEY,
+        testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
         platformName: 'Android',
         /* supply `platformVersion` without `deviceName` to get any available device with that version dynamically */
         // platformVersion: '7', // Optional
         // deviceName: 'Samsung Galaxy S8' // Optional
         testobject_test_name: 'Basic Nodejs Test',
-        // testobject_session_creation_timeout: '900000',
-        // tunnelIdentifier: 'FakeBusiness'
+        // tunnelIdentifier: 'tunnelName' // Optional tunnel
     }],
 
     specs: [
@@ -22,7 +21,7 @@ var config = {
     logLevel: 'verbose',
     coloredLogs: true,
     screenshotPath: './errorShots/',
-    waitforTimeout: 10000,
+    // waitforTimeout: 10000,
     connectionRetryTimeout: 10 * 60000,
     connectionRetryCount: 3,
     framework: 'mocha',
