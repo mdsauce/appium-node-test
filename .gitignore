@@ -61,4 +61,4 @@ typings/
 .next
 
 #ignore mac stuff
-.ds_store
+.DS_Store
