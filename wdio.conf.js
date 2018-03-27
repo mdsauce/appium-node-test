@@ -4,7 +4,7 @@ var config = {
     port: '443',
     path: '/wd/hub',
     capabilities: [{
-        testobject_api_key: '27CFF10C8AAB4B9D9B6898C94FDBA2D4',
+        testobject_api_key: process.env.RDC_PROJECT_API_KEY,
         platformName: 'Android',
         /* supply `platformVersion` without `deviceName` to get any available device with that version dynamically */
         // platformVersion: '7', // Optional
