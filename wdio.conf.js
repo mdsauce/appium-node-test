@@ -17,23 +17,32 @@ var config = {
     * Refer to for more info https://github.com/webdriverio/webdriverio/issues/205#issuecomment-183345085
     */
     maxInstances: 20,
-    capabilities: [{
-        testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
-        platformName: 'Android',
-        browserName: 'chrome',
-        /* supply `platformVersion` without `deviceName` to get any available device with that version dynamically */
-        // platformVersion: '7', // Optional
-        // deviceName: 'Samsung Galaxy S8' // Optional
-        testobject_test_name: 'Basic Nodejs Test',
-        // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
-    },
-    {
-        testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
-        platformName: 'iOS',
-        browserName: 'chrome',
-        testobject_test_name: 'Basic Nodejs Test',
-        // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
-    }
+    capabilities: [
+        {
+            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            platformName: 'Android',
+            browserName: 'chrome',
+            /* supply `platformVersion` without `deviceName` to get any available device with that version dynamically */
+            // platformVersion: '7', // Optional
+            // deviceName: 'Samsung Galaxy S8' // Optional
+            testobject_test_name: 'Basic Nodejs Test',
+            // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+        },
+        {
+            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            platformName: 'iOS',
+            browserName: 'chrome',
+            testobject_test_name: 'Basic Nodejs Test',
+            // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+        },
+        {
+            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            platformName: 'iOS',
+            browserName: 'safari',
+            browserVersion: 'latest',
+            testobject_test_name: 'Basic Nodejs Test',
+            // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+        }
     ],
 
     specs: [
