@@ -5,7 +5,7 @@
         "test": "./node_modules/.bin/wdio wdio.conf.js"
     },
     "dependencies": {
-        "selenium-standalone": "^6.13.0",
+        "appium": "^1.7.2",
         "wdio-mocha-framework": "^0.5.13",
         "wdio-spec-reporter": "^0.1.4",
         "webdriverio": "^4.12"
