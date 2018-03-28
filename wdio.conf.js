@@ -12,6 +12,10 @@ var config = {
     // key: process.env.SAUCE_ACCESS_KEY,
     // sauceConnect: true, // Optional use of Sauce Connect Proxy http://webdriver.io/guide/services/sauce.html#sauceConnect 
 
+    /* Optional maxInstances value limits the number of child processes spawned.
+    * Each capability defined gets a child process so that tests automatically run in parallel
+    * Refer to for more info https://github.com/webdriverio/webdriverio/issues/205#issuecomment-183345085
+    */
     maxInstances: 20,
     capabilities: [{
         testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
