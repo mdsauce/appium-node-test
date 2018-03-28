@@ -1,12 +1,13 @@
 var config = {
-     
+    
     protocol: 'https',
     host: 'us1.appium.testobject.com',
+    // host: 'eu1.appium.testobject.com'
     port: '443',
     path: '/wd/hub',
     
 
-    // baseUrl: 'https://us1.appium.testobject.com/wd/hub',
+    // baseUrl: 'https://us1.appium.testobject.com/wd/hub:443',
 
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
