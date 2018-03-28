@@ -40,6 +40,7 @@ var config = {
     logLevel: 'verbose',
     coloredLogs: true,
     screenshotPath: './errorShots/',
+    reporters: ['spec'],
     // waitforTimeout: 10000,
     connectionRetryTimeout: 10 * 60000,
     connectionRetryCount: 3,
