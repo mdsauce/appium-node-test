@@ -2,9 +2,10 @@
 
 ### Getting Started
 
-cd to/your/test/directory
+git clone git@github.com:mdsauce/appium-node-test.git
+cd appium-node-test
 
-`npm or yarn`
+`use npm or yarn`
 
 ```bash
 yarn install
