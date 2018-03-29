@@ -27,6 +27,7 @@ var config = {
             // deviceName: 'Samsung Galaxy S8' // Optional
             testobject_test_name: 'Basic Nodejs Test',
             // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+            appiumVersion: '1.7.2'
         },
         {
             testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
@@ -34,6 +35,7 @@ var config = {
             browserName: 'chrome',
             testobject_test_name: 'Basic Nodejs Test',
             // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+            appiumVersion: '1.7.2'
         },
         {
             testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
@@ -42,6 +44,7 @@ var config = {
             browserVersion: 'latest',
             testobject_test_name: 'Basic Nodejs Test',
             // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
+            appiumVersion: '1.7.2'
         }
     ],
 

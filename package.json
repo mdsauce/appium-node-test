@@ -5,6 +5,7 @@
         "test": "./node_modules/.bin/wdio wdio.conf.js"
     },
     "dependencies": {
+        "testobject_api": "^1.1.0",
         "wdio-mocha-framework": "^0.5.13",
         "wdio-spec-reporter": "^0.1.4",
         "webdriverio": "^4.12"
