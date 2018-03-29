@@ -3,7 +3,7 @@ let mochaTimeout = 100000;
 var config = {
     protocol: 'https',
     host: 'us1.appium.testobject.com',
-    // host: 'eu1.appium.testobject.com'
+    // host: 'eu1.appium.testobject.com' // Uncomment and use if you need the EU datacenter
     port: '443',
     path: '/wd/hub',
 
@@ -19,7 +19,7 @@ var config = {
     maxInstances: 20,
     capabilities: [
         {
-            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            testobject_api_key: process.env.RDC_SAMPLE_API_KEY,
             platformName: 'Android',
             browserName: 'chrome',
             /* supply `platformVersion` without `deviceName` to get any available device with that version dynamically */
@@ -30,7 +30,7 @@ var config = {
             appiumVersion: '1.7.2'
         },
         {
-            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            testobject_api_key: process.env.RDC_SAMPLE_API_KEY,
             platformName: 'iOS',
             browserName: 'chrome',
             testobject_test_name: 'Basic Nodejs Test',
@@ -38,7 +38,7 @@ var config = {
             appiumVersion: '1.7.2'
         },
         {
-            testobject_api_key: 'D377483757DE4C7FA46B0DBDEF9540AA',
+            testobject_api_key: process.env.RDC_SAMPLE_API_KEY,
             platformName: 'iOS',
             browserName: 'safari',
             browserVersion: 'latest',
