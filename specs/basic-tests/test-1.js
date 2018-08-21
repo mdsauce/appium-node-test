@@ -1,6 +1,5 @@
 const assert = require('assert')
 let TestObject = require('testobject_api')
-
 let rdcAccount = new TestObject({
     username: process.env.RDC_ADMIN_USERNAME,
     apiKey: process.env.RDC_ACCESS_KEY,
@@ -9,28 +8,27 @@ let rdcAccount = new TestObject({
 
 describe('TestObject website', function() {
     it('TestObject homepage loads', function() {
-        browser.url('https://testobject.com')
-        let pageUrl = browser.getUrl()
-        let uiOverlay = browser.element(".overlay")
-        uiOverlay.waitForVisible(5000)
+        browser.url('https://app.testobject.com')
+        browser.getUrl()
+        browser.waitForVisible('#loginScreen', 12000)
         let title = browser.getTitle()
-        assert.equal(title, 'TestObject – Android and iOS Mobile App Testing Made Easy')
-        if (title !== 'TestObject – Android and iOS Mobile App Testing Made Easy') {
-            rdcAccount.updateTest(browser.session().sessionId, {"passed":false}, function(err, resp){})
-        } else {
-            rdcAccount.updateTest(browser.session().sessionId, {"passed":true}, function(err, resp){})
-        }
-        browser.pause(2000)
-    })
-    
-    it('Homepage rotates to portrait mode', function() {
-        browser.orientation('portrait')
-        let currentOrientation = browser.orientation()
-        assert.equal('PORTRAIT', currentOrientation.value)
-        if ( currentOrientation.value !== 'PORTRAIT') {
+        if (assert.equal(title, 'Sign In | Sauce Labs')) {
             rdcAccount.updateTest(browser.session().sessionId, {"passed":false}, function(err, resp){})
         } else {
             rdcAccount.updateTest(browser.session().sessionId, {"passed":true}, function(err, resp){})
         }
     })
+
+    it('Can get device info', function() {
+        console.log("Getting the Session Info")
+        let device = browser.session()
+        console.log("\nDevice: ", device.value.device)
+    })
+
+    /*it('Can get the device logs', function() {
+        let logs = browser.log("driver") // syslog is not recognized by android but 'driver' is.
+        console.log("Logs: ", logs)
+        const logTypes = driver.logTypes();
+        console.log("Log Types available: ", logTypes)
+    })*/
 })
