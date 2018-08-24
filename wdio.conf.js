@@ -46,7 +46,13 @@ var config = {
             platformName: 'android',
             testobject_test_name: 'TestObject.com Render on Android'
             // tunnelIdentifier: 'fakeBusiness' // Optional tunnel
-        }
+        },
+/*        {
+           testobject_api_key: process.env.RDC_SAMPLE_API_KEY,
+           platformName: 'android',
+           platformVersion: '8',
+           testobject_test_name: 'TestObject.com Render on Android'
+        }*/
     ],
 
     specs: [

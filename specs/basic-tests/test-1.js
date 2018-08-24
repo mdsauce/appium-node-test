@@ -22,7 +22,13 @@ describe('TestObject website', function() {
     it('Can get device info', function() {
         console.log("Getting the Session Info")
         let device = browser.session()
+        console.log("Returned capabilities: ", device)
         console.log("\nDevice: ", device.value.device)
+
+        console.log("Avaiilable Browser contexts: ", browser.contexts())
+        browser.context(["NATIVE_APP"])
+        let nativeDevice = browser.session()
+        console.log("browser session in NATIVE_APP context: ", nativeDevice)
     })
 
     /*it('Can get the device logs', function() {
